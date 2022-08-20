@@ -13,16 +13,30 @@ namespace u21447234_HW04.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Donate()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Donate";
 
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Volunteer()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Volunteer";
+
+            return View();
+        }
+
+        public ActionResult Petition()
+        {
+            ViewBag.Message = "Petition";
+
+            return View();
+        }
+
+        public ActionResult About()
+        {
+            ViewBag.Message = "Your application description page.";
 
             return View();
         }
