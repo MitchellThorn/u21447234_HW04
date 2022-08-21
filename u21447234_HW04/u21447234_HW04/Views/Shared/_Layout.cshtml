@@ -9,29 +9,38 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
+    <div class="wrapper">
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
     <nav class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
         <div class="container-fluid">
+            <img src="https://findicons.com/files/icons/2106/flat_for_linux/128/39_globe.png" class="homeIco">
             @Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0" style="margin-top: 3px; margin-left: -4px;">
                     <li class="nav-item">
-                        @Html.ActionLink("Donate", "Donate", "Home", new { area = "" }, new { @class = "nav-link" })
+                        @Html.ActionLink("Assist Us", "AssistUs", "Home", new { area = "" }, new { @class = "nav-link" })
                     </li>
                     <li class="nav-item">
-                        @Html.ActionLink("Volunteer", "Volunteer", "Home", new { area = "" }, new { @class = "nav-link" })
-                    </li>
-                    <li class="nav-item">
-                        @Html.ActionLink("Petition", "Petition", "Home", new { area = "" }, new { @class = "nav-link" })
-                    </li>
-                    <li class="nav-item">
-                        @Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link" })
+                        @Html.ActionLink("About", "AboutUs", "Home", new { area = "" }, new { @class = "nav-link" })
                     </li>
                 </ul>
                 <form class="d-flex">
-                    <img src="https://www.forgerecycling.co.uk/blog/wp-content/uploads/2018/08/bigstock-Top-view-of-white-recycle-eco-209395741-825x510.jpg" class="rounded recycle" alt="Recycle">
+                    <img src="https://www.forgerecycling.co.uk/blog/wp-content/uploads/2018/08/bigstock-Top-view-of-white-recycle-eco-209395741-825x510.jpg" class="rounded recycle">
                 </form>
             </div>
         </div>
@@ -44,14 +53,147 @@
             <p style="color:white">&copy; Restore The Earth @DateTime.Now.Year (u21447234)</p>
         </footer>
     </div>
+    <div class="fixed earth">
+        <img src="https://findicons.com/files/icons/989/ivista_2/128/globe_connected.png" class="rounded world">
+    </div>
+
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/Scripts/bootstrap.min.js")
     @RenderSection("scripts", required: false)
 </body>
 </html>
 <style>
+    body
+    {
+        color: white;
+    }
+    .wrapper {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: linear-gradient(90deg, rgba(2,0,0.6,1), rgba(9,9,121,1) 35%, rgba(0,212,225,1) 100%);
+        z-index: -1;
+    }
+
+    .box div {
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        background-color: transparent;
+        border: 6px solid rgba(255,255,255,0.8)
+    }
+
+        .box div:nth-child(1) {
+            top: 12%;
+            left: 42%;
+            animation: animate 10s linear infinite;
+        }
+
+        .box div:nth-child(2) {
+            top: 70%;
+            left: 50%;
+            animation: animate 7s linear infinite;
+        }
+
+        .box div:nth-child(3) {
+            top: 17%;
+            left: 6%;
+            animation: animate 9s linear infinite;
+        }
+
+        .box div:nth-child(4) {
+            top: 20%;
+            left: 60%;
+            animation: animate 10s linear infinite;
+        }
+
+        .box div:nth-child(5) {
+            top: 67%;
+            left: 10%;
+            animation: animate 6s linear infinite;
+        }
+
+        .box div:nth-child(6) {
+            top: 80%;
+            left: 70%;
+            animation: animate 12s linear infinite;
+        }
+
+        .box div:nth-child(7) {
+            top: 60%;
+            left: 80%;
+            animation: animate 15s linear infinite;
+        }
+
+        .box div:nth-child(8) {
+            top: 32%;
+            left: 25%;
+            animation: animate 16s linear infinite;
+        }
+
+        .box div:nth-child(9) {
+            top: 90%;
+            left: 25%;
+            animation: animate 9s linear infinite;
+        }
+
+        .box div:nth-child(10) {
+            top: 20%;
+            left: 80%;
+            animation: animate 5s linear infinite;
+        }
+        
+    @@keyframes animate{
+         0%{
+            transform: scale(0) translateY(0) rotate(0);
+            opacity: 1;
+         }
+         100%{
+            transform: scale(1.3) translateY(-90px) rotate(360deg);
+            opacity: 0;
+         }
+    }
+
     .recycle {
         height: 45px;
         width: 75px;
+    }
+
+    .world {
+        max-height: 5%;
+        max-width: 5%;
+        position: fixed;
+        right: 15px;
+        bottom: 10px;
+    }
+
+    .homeIco {
+        height: 50px;
+        width: 50px;
+        margin-right: 5px;
+    }
+    
+    .jumbotron {
+        margin: auto;
+        color: white;
+        text-align: center;
+        background-color: inherit;
+        border-radius: 10px;
+        box-shadow: inset 0 0 0 500px rgba(255,255,255,0.2);
+    }
+
+    .heading {
+        font-size: 70px;
+        font-weight: 700;
+        background-image: url("https://th-thumbnailer.cdn-si-edu.com/XJFrDNlNhvtv1uH-U6FKdBJ_U2U=/1000x750/filters:no_upscale()/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/04/8e/048ed839-a581-48af-a0ae-fac6fec00948/gettyimages-168346757_web.jpg");
+        background-position: 20% 5%;
+        @*background-image: linear-gradient(to left, blue, lightblue, green);*@
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        text-align: center;
+        background-size: cover;
+        padding-bottom: 10px;
     }
 </style>

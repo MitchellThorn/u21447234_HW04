@@ -13,22 +13,12 @@ namespace u21447234_HW04.Controllers
             return View();
         }
 
-        public ActionResult Donate()
+        public ActionResult AssistUs()
         {
             return View();
         }
 
-        public ActionResult Volunteer()
-        {
-            return View();
-        }
-
-        public ActionResult Petition()
-        {
-            return View();
-        }
-
-        public ActionResult About()
+        public ActionResult AboutUs()
         {
             return View();
         }
