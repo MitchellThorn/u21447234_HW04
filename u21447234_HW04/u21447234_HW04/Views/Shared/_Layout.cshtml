@@ -36,6 +36,9 @@
                         @Html.ActionLink("Assist Us", "AssistUs", "Home", new { area = "" }, new { @class = "nav-link" })
                     </li>
                     <li class="nav-item">
+                        @Html.ActionLink("Donate", "Donate", "Home", new { area = "" }, new { @class = "nav-link" })
+                    </li>
+                    <li class="nav-item">
                         @Html.ActionLink("About", "AboutUs", "Home", new { area = "" }, new { @class = "nav-link" })
                     </li>
                 </ul>
@@ -173,7 +176,7 @@
         width: 50px;
         margin-right: 5px;
     }
-    
+
     .jumbotron {
         margin: auto;
         color: white;
@@ -181,6 +184,7 @@
         background-color: inherit;
         border-radius: 10px;
         box-shadow: inset 0 0 0 500px rgba(255,255,255,0.2);
+        backdrop-filter: blur(10px);
     }
 
     .heading {
@@ -188,7 +192,6 @@
         font-weight: 700;
         background-image: url("https://th-thumbnailer.cdn-si-edu.com/XJFrDNlNhvtv1uH-U6FKdBJ_U2U=/1000x750/filters:no_upscale()/https://tf-cmsv2-smithsonianmag-media.s3.amazonaws.com/filer/04/8e/048ed839-a581-48af-a0ae-fac6fec00948/gettyimages-168346757_web.jpg");
         background-position: 20% 5%;
-        @*background-image: linear-gradient(to left, blue, lightblue, green);*@
         color: transparent;
         background-clip: text;
         -webkit-background-clip: text;

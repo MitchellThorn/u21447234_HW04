@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<u21447234_HW04.Models.Volunteer>
+@{
     ViewBag.Title = "Restore The Earth";
     ViewBag.Message = "Our mission is to restore the Earth’s essential forest and wetland ecosystems. We envision the Earth in balance — its original vitality and natural abundance available to all, for generations to come.";
 }
@@ -6,14 +7,66 @@
 <div class="jumbotron" style="max-width: 650px; background-color: #000000; box-shadow: none;">
     <h1 class="heading">@ViewBag.Title</h1>
 </div>
-<h5 style="text-align: center; color:white">Our mission is to restore the Earth’s essential forest and wetland ecosystems. <br /> We envision the Earth in balance, its original vitality and natural abundance available to all, for generations to come. <br/> <br/> To help our cause please consider donating, each R20 donated is equal to 1 tree planted. Volunteering is also a way to help make this movement a reality. <br/> For your voice to be heard, consider signing a petition that you are compassionate about.</h5>
+<h5 style="text-align: center; color:white">Our mission is to restore the Earth’s essential forest and wetland ecosystems. <br /> We envision the Earth in balance, its original vitality and natural abundance available to all, for generations to come. <br /> <br /> To help our cause please consider volunteering, help make our agendas a reality.</h5>
 <br />
 
 <style>
     .narative {
         max-width: 90%;
     }
+
+    .tContainer {
+        padding: 15px 15px 1px 15px;
+    }
+
+    .bdr {
+        border-radius: 5px;
+        overflow: hidden;
+    }
 </style>
+
+<div class="jumbotron" style="max-width: 90%">
+    <div class="tContainer">
+        <h2 style="text-align: center; color:white; margin-top: -10px; margin-bottom: 16px;"><u>Your Current Volunteering Applications</u></h2>
+        <table class="table table-hover bdr" id="volT" style="border-spacing: 0; border-collapse: separate; border-radius: 10px; border: 1px solid black; ">
+            <thead style=" background-color: #2270b7; color: white">
+                <tr>
+                    <th>Full Name</th>
+                    <th>Type</th>
+                    <th>Choice</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    try
+                    {
+                        @*foreach (var volunteer in Model)
+                            {
+                                <tr>
+                                    <th>@volunteer.getFullName()</th>
+                                    <td>@volunteer.getType()</td>
+                                    <td>@volunteer.getChoice()</td>
+                                    <td><button class="btnDelete">Delete</button></td>
+                                </tr>
+                            }*@
+                        <tr>
+                            <th>John Jonny</th>
+                            <td>Tree Planter</td>
+                            <td>Digging</td>
+                            <td><button class="btn-primary btnDelete">Delete</button></td>
+                        </tr>
+                    }
+                    catch
+                    {
+
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+<br />
 
 <div class="jumbotron" style="max-width:72%">
     <h2 style="text-align: center; padding-top: 7px"><u>Use Case Narratives</u></h2>
@@ -21,16 +74,16 @@
     <div class="container">
         <div class="row" style="margin-top: 20px; text-align:center">
             <div class="col-lg-12" style="margin-bottom: 30px">
-                <img src="https://media.cheggcdn.com/media/152/15223db6-10de-49f8-9ca5-a2cf86172c5f/phpRNSgfe.png" class="narative">
+                <img src="https://i.im.ge/2022/08/22/OUbNdx.Nar1.png" class="narative">
             </div>
             <div class="col-lg-12" style="margin-bottom: 30px">
-                <img src="https://media.cheggcdn.com/media/152/15223db6-10de-49f8-9ca5-a2cf86172c5f/phpRNSgfe.png" class="narative">
+                <img src="https://i.im.ge/2022/08/22/OUbPPa.Nar2.png" class="narative">
             </div>
             <div class="col-lg-12" style="margin-bottom: 30px">
-                <img src="https://media.cheggcdn.com/media/152/15223db6-10de-49f8-9ca5-a2cf86172c5f/phpRNSgfe.png" class="narative">
+                <img src="https://i.im.ge/2022/08/22/OUbC9S.Nar3.png" class="narative">
             </div>
             <div class="col-lg-12" style="margin-bottom: 60px">
-                <img src="https://media.cheggcdn.com/media/152/15223db6-10de-49f8-9ca5-a2cf86172c5f/phpRNSgfe.png" class="narative" />
+                <img src="https://i.im.ge/2022/08/22/OUbYLF.Nar4.png" class="narative" />
             </div>
         </div>
     </div>
@@ -43,8 +96,18 @@
     <div class="container">
         <div class="row" style="margin-top: 20px; text-align:center">
             <div class="col-lg-12" style="margin-bottom: 60px">
-                <img src="https://media.cheggcdn.com/media/152/15223db6-10de-49f8-9ca5-a2cf86172c5f/phpRNSgfe.png" class="narative">
+                <img src="https://i.im.ge/2022/08/21/OUYuiT.Mitchell-CLack-cdg.png" class="narative">
             </div>
         </div>
     </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+
+        $("#volT").on('click', '.btnDelete', function () {
+            $(this).closest('tr').remove();
+        });
+
+    });
+</script>

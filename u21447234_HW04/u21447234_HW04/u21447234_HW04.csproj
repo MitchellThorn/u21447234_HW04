@@ -119,9 +119,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Donator.cs" />
-    <Compile Include="Models\Petition.cs" />
-    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Missionary.cs" />
+    <Compile Include="Models\OceanCleaner.cs" />
+    <Compile Include="Models\TreePlanter.cs" />
     <Compile Include="Models\Volunteer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -184,6 +184,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.js" />
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\Volunteer\Volunteer.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

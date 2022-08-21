@@ -3,14 +3,69 @@
     ViewBag.Title = "Donate";
 }
 
-<h2>Donate</h2>
+<div class="jumbotron" style="max-width: 400px; background-color: #000000; box-shadow: none;">
+    <h1 class="heading">@ViewBag.Title</h1>
+</div>
+<br />
 
-<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+<style>
+    label {
+        font-size: 16px;
+    }
+
+    input {
+        text-align: center;
+        margin-bottom: 5px;
+        max-width: 90%;
+    }
+</style>
+
+<div class="container">
+    <div class="row" style="margin-top: -15px; text-align: center">
+        <div class="col-lg-12" style="margin-bottom: 30px; margin-top: 15px; margin-left: 1px;">
+            <div class="card" style="margin-bottom: 10px; margin-left: 25%; max-width: 50%; background-color: transparent; backdrop-filter: blur(10px); font-size: 20px; ">
+                <div class="card-header" style="background-color: #2270b7">Donate</div>
+                <div class="card-body" style="text-align: center;">
+                    <label for="fName">First Name</label><br />
+                    <input type="text" id="fName" name="fName">
+                    <br />
+                    <label for="lName">Last Name</label><br />
+                    <input type="text" id="lName" name="fName">
+                    <br />
+                    <label for="email">Email</label><br />
+                    <input type="email" id="email">
+                    <br />
+                    <label for="amount">Amount</label><br />
+                    <input type="text" id="amount">
+                    <br />
+                    <label for="cNumber">Card Number</label><br />
+                    <input type="text" id="cNumber">
+                    <br />
+                    <br />
+                    <a href="#" class="btn btn-primary">Donate</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
+
+@*<div class="modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>*@
